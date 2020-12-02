@@ -9,7 +9,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $minutes = 60;
+        $minutes = 30;
+        Log::info("Retrieving forecast");
         $forecast = Cache::remember('forecast', $minutes, function () {
             $weather = null;
             Log::info("Not from cache");
