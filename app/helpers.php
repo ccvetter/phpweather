@@ -28,10 +28,8 @@ function getForecast($name, $route) {
 		$url = "{$base_url}{$route}";
 		$query = ['q' => $default_location, 'appid' => $app_id, 'units' => 'imperial'];
 		$res = Http::get($url, $query);
-		Log::info($res->status());
 		if ($res->status() == 200) {
 			$obj = $res->body();
-			Log::info($res);
 			$forecast = json_decode($obj, true);
 		}
 
