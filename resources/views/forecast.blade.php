@@ -61,8 +61,10 @@
                             <p class="card-text">
                                 @foreach($daily["weather"] as $w)
                                     <img src="http://openweathermap.org/img/w/{{ $w['icon'] }}.png">
-                                    {{ $w["main"] }} - {{ $w["description"] }}
+                                    {{ $w["main"] }} - {{ $w["description"] }}<br>
                                 @endforeach
+                                High: {{ $daily["temp"]["max"] }}<span>&#8457;</span><br>
+                                Low: {{ $daily["temp"]["min"] }}<span>&#8457;</span>
                             </p>
                         </div>
                     </div>
