@@ -21,7 +21,6 @@ class HomeController extends Controller
 
             if ($res->status() == 200) {
                 $obj = $res->body();
-                Log::info($res->json());
                 $forecast = json_decode($obj, true);
             }
 
