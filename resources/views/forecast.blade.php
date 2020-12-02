@@ -48,4 +48,9 @@
             There is no forecast for that location 
         @endif
     </div>  
+    <script type="text/javascript">
+        setTimeout(function(){
+            location.reload();
+        },1805000);
+    </script>
 @stop
