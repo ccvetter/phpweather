@@ -64,7 +64,8 @@
                                     {{ $w["main"] }} - {{ $w["description"] }}<br>
                                 @endforeach
                                 High: {{ $daily["temp"]["max"] }}<span>&#8457;</span><br>
-                                Low: {{ $daily["temp"]["min"] }}<span>&#8457;</span>
+                                Low: {{ $daily["temp"]["min"] }}<span>&#8457;</span><br>
+                                Chance of rain: {{ round((float)$daily["pop"] * 100)}}<span>&#37;</span>
                             </p>
                         </div>
                     </div>
