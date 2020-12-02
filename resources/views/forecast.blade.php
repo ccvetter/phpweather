@@ -14,6 +14,7 @@
                         <div class="card-body">
                             <p class="card-text">
                                 @foreach($forecast["weather"] as $w)
+                                    <img src="http://openweathermap.org/img/w/{{ $w['icon'] }}.png"><br>
                                     {{ $w["main"] }}<br>
                                     {{ $w["description"] }}
                                 @endforeach
